@@ -1,7 +1,7 @@
 autoUpdate:
   enabled: false
   schedule: ""
-bootConfigURL: https://github.com/craft-de-jet/environment-larry-jx-dev
+bootConfigURL: https://github.com/craft-de-jet/environment-larry-ray-dev
 cluster:
   clusterName: larry-jx
   devEnvApprovers:
@@ -24,6 +24,7 @@ environments:
       enabled: false
       production: false
   key: dev
+  repository: environment-larry-jx-dev
 - ingress:
     domain: ""
     externalDNS: false
@@ -33,6 +34,7 @@ environments:
       enabled: false
       production: false
   key: staging
+  repository: environment-larry-jx-staging
 - ingress:
     domain: ""
     externalDNS: false
@@ -42,6 +44,7 @@ environments:
       enabled: false
       production: false
   key: production
+  repository: environment-larry-jx-production
 gitops: true
 ingress:
   domain: 35.200.235.172.nip.io
@@ -73,6 +76,6 @@ velero:
   schedule: ""
   ttl: ""
 versionStream:
-  ref: master
+  ref: v1.0.517
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow

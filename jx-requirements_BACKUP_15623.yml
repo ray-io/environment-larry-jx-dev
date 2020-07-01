@@ -1,8 +1,12 @@
-autoUpdate:
-  enabled: false
-  schedule: ""
-bootConfigURL: https://github.com/craft-de-jet/environment-larry-jx-dev
 cluster:
+<<<<<<< Updated upstream
+  clusterName: ""
+  environmentGitOwner: ""
+  environmentGitPublic: false
+  project: ""
+  provider: gke
+  zone: ""
+=======
   clusterName: larry-jx
   devEnvApprovers:
   - craft-de-jet
@@ -24,6 +28,7 @@ environments:
       enabled: false
       production: false
   key: dev
+  repository: environment-larry-jx-dev
 - ingress:
     domain: ""
     externalDNS: false
@@ -33,6 +38,7 @@ environments:
       enabled: false
       production: false
   key: staging
+  repository: environment-larry-jx-staging
 - ingress:
     domain: ""
     externalDNS: false
@@ -42,23 +48,23 @@ environments:
       enabled: false
       production: false
   key: production
+  repository: environment-larry-jx-production
+>>>>>>> Stashed changes
 gitops: true
+environments:
+- key: dev
+- key: staging
+- key: production
 ingress:
-  domain: 35.200.235.172.nip.io
+  domain: ""
   externalDNS: false
-  ignoreLoadBalancer: true
-  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
-repository: nexus
 secretStorage: local
 storage:
-  backup:
-    enabled: false
-    url: ""
   logs:
     enabled: false
     url: ""
@@ -68,11 +74,11 @@ storage:
   repository:
     enabled: false
     url: ""
-vault: {}
-velero:
-  schedule: ""
-  ttl: ""
 versionStream:
-  ref: master
+<<<<<<< Updated upstream
+  ref: "master"
+=======
+  ref: v1.0.517
+>>>>>>> Stashed changes
   url: https://github.com/jenkins-x/jenkins-x-versions.git
-webhook: prow
+webhook: lighthouse

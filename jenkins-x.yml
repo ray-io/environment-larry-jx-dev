@@ -9,6 +9,8 @@ pipelineConfig:
         - name: pr-checks
           options:
             containerOptions:
+              name: ""
+              resources: {}
               volumeMounts:
               - mountPath: /builder/home/.jx/localSecrets/currentCluster
                 name: local-secrets
@@ -44,6 +46,8 @@ pipelineConfig:
         - name: release
           options:
             containerOptions:
+              name: ""
+              resources: {}
               volumeMounts:
               - mountPath: /builder/home/.jx/localSecrets/currentCluster
                 name: local-secrets
